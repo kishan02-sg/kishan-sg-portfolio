@@ -114,7 +114,7 @@
       "title": "SmartDetect",
       "subtitle": "Universal Camera-Based Detection System",
       "type": "Computer Vision",
-      "link": "https://github.com/kishan02-sg",
+      "link": "https://dashboard-nine-weld-43.vercel.app/",
       "image": "/assets/project-smartdetect-v2.png",
       "tech": ["Python", "FastAPI", "React", "PostgreSQL", "pgvector", "Docker", "YOLOv8", "InsightFace", "DeepSORT", "OpenCV"],
       "desc": "Architected a multi-model detection pipeline (InsightFace + OSNet Re-ID + DeepSORT + YOLOv8) achieving 90%+ accuracy with 512-dimensional face embeddings in pgvector for cross-location tracking — improving night-time detection from 55% to 78%+ and crowd detection from 65% to 85%+, with a React operator dashboard for real-time analytics."
@@ -136,6 +136,14 @@
       "year": "2026",
       "link": "https://www.linkedin.com/in/kishan-s-g",
       "desc": "Solved offline billing for low/unstable internet environments with an IndexedDB-based sync system ensuring uninterrupted transactions — shortlisted to the final round among all competing teams."
+    },
+    {
+      "id": 5,
+      "title": "Claude Code in Action",
+      "platform": "Anthropic",
+      "year": "2026",
+      "link": "https://www.linkedin.com/in/kishan-s-g",
+      "desc": "Earned Anthropic's official Claude Code in Action certification — building agentic AI development workflows and shipping production software with Claude Code."
     },
     {
       "id": 3,
