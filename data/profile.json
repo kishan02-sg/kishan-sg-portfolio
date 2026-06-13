@@ -1,0 +1,161 @@
+{
+  "name": {
+    "first": "Kishan",
+    "last": "S G",
+    "full": "Kishan S G"
+  },
+  "email": "kishansg02@gmail.com",
+  "tagline": "Building full-stack AI products — multi-agent systems, computer vision, and products that ship.",
+  "description": "Final-year B.Tech IT student who designs and ships full-stack AI systems — multi-agent architectures, computer vision pipelines, and production-ready web platforms.",
+  "roles": {
+    "short": "Full-Stack & AI Engineer",
+    "detailed": "AI Agents | Computer Vision | Full-Stack Development"
+  },
+  "location": {
+    "based": "Coimbatore, India",
+    "availability": "India / Remote / Abroad"
+  },
+  "available": true,
+  "bio": "Final-year B.Tech IT student who ships production AI systems using modern LLM tooling — including a 7-agent retail platform designed for India's 15M+ kirana store market and a real-time multi-model surveillance system. Proficient in integrating and deploying full-stack AI products using Python, FastAPI, React, and the Gemini API, with hands-on experience in Docker, PostgreSQL, computer vision pipelines, and multi-agent architectures. Seeking Full-Stack + AI internship opportunities.",
+  "stats": [
+    { "value": "7", "label": "AI Agents Architected" },
+    { "value": "2", "label": "Production Projects" },
+    { "value": "90%+", "label": "CV Model Accuracy" }
+  ],
+  "skills": [
+    "Python",
+    "JavaScript",
+    "Java",
+    "SQL",
+    "LangChain",
+    "Multi-Agent Systems",
+    "Prompt Engineering",
+    "Gemini API",
+    "Google Vision API",
+    "YOLOv8",
+    "InsightFace",
+    "DeepSORT",
+    "FastAPI",
+    "React",
+    "PostgreSQL",
+    "pgvector",
+    "Redis",
+    "Docker",
+    "Figma"
+  ],
+  "experience": [
+    {
+      "id": 1,
+      "role": "Lead Developer & Architect",
+      "company": "KadaiGPT — AI-Powered Retail Platform",
+      "companyShort": "KADAIGPT",
+      "type": "Personal Project",
+      "location": "Coimbatore, India",
+      "period": "2025",
+      "periodEnd": "Present",
+      "bullets": [
+        "Designed a 7-agent platform (Voice Command, OCR, Revenue Forecast, Churn Prediction, Anomaly Detection, Auto-Restock) targeting India's 15M+ kirana store market.",
+        "Built multilingual voice billing in Tamil/Hindi and automated WhatsApp receipt delivery integrated into the billing flow.",
+        "Built an OCR pipeline with the Google Vision API to extract handwritten inventory lists, cutting manual data entry by 90%.",
+        "Implemented an offline-first architecture via IndexedDB so the app keeps working in low-connectivity rural environments."
+      ],
+      "desc": "An AI-powered retail store management system architected as 7 specialized agents, deployed end-to-end with Docker, Redis, PostgreSQL, and JWT/bcrypt auth.",
+      "tech": ["Python", "FastAPI", "React", "PostgreSQL", "Redis", "Docker", "Gemini API", "Google Vision API"]
+    },
+    {
+      "id": 2,
+      "role": "Architect & Developer",
+      "company": "SmartDetect — Universal Camera-Based Detection System",
+      "companyShort": "SMARTDETECT",
+      "type": "Personal Project",
+      "location": "Coimbatore, India",
+      "period": "2026",
+      "periodEnd": "In Development",
+      "bullets": [
+        "Architected a multi-model detection pipeline (InsightFace + OSNet Re-ID + DeepSORT + YOLOv8) achieving 90%+ accuracy.",
+        "Stored 512-dimensional face embeddings in PostgreSQL with pgvector for cross-location person tracking.",
+        "Improved night-time detection accuracy from 55% to 78%+ via CLAHE, gamma correction, and bilateral filtering.",
+        "Built a crowd-mode that boosts crowd-detection accuracy from 65% to 85%+ by splitting frames into quadrants, plus a React operator dashboard with real-time person trails and zone-based alerts."
+      ],
+      "desc": "A multi-model camera-based detection system with a real-time operator dashboard, multi-location analytics, and zone-based alerting.",
+      "tech": ["Python", "FastAPI", "React", "PostgreSQL", "pgvector", "Docker", "YOLOv8", "InsightFace", "DeepSORT", "OpenCV"]
+    },
+    {
+      "id": 3,
+      "role": "Bachelor of Technology, Information Technology",
+      "company": "Sri Krishna College of Technology, Coimbatore",
+      "companyShort": "SKCT",
+      "type": "Education",
+      "location": "Coimbatore, India",
+      "period": "2023",
+      "periodEnd": "Present",
+      "bullets": [
+        "Coursework: Database Management Systems, Data Structures, Statistics. Current CGPA: 7.3.",
+        "2nd Prize, UI/UX Design — designed a data-driven ticket booking app, conducted A/B testing with 50+ users in Figma, and secured a Top 2 rank among 85+ entries.",
+        "Hackathon Finalist (2026) — solved offline billing for low/unstable internet using an IndexedDB-based sync system; shortlisted to the final round."
+      ],
+      "desc": "B.Tech in Information Technology, with hands-on achievements in UI/UX design and hackathon finals alongside coursework in databases, data structures, and statistics.",
+      "tech": ["Figma", "IndexedDB", "Database Management", "Data Structures", "Statistics"]
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "KadaiGPT",
+      "subtitle": "AI-Powered Retail Store Management System",
+      "type": "Multi-Agent AI",
+      "link": "https://kadaigpt-main.vercel.app",
+      "image": "/assets/project-kadaigpt-v2.png",
+      "tech": ["Python", "FastAPI", "React", "PostgreSQL", "Redis", "Docker", "Gemini 2.0 API", "Google Vision API", "PWA"],
+      "desc": "Designed a 7-agent platform (Voice Command, OCR, Revenue Forecast, Churn Prediction, Anomaly Detection, Auto-Restock) targeting India's 15M+ kirana store market — with multilingual voice billing in Tamil/Hindi, automated WhatsApp receipts, an OCR pipeline that cuts manual inventory entry by 90%, and an offline-first architecture for low-connectivity rural environments."
+    },
+    {
+      "id": 2,
+      "title": "SmartDetect",
+      "subtitle": "Universal Camera-Based Detection System",
+      "type": "Computer Vision",
+      "link": "https://github.com/kishan02-sg",
+      "image": "/assets/project-smartdetect-v2.png",
+      "tech": ["Python", "FastAPI", "React", "PostgreSQL", "pgvector", "Docker", "YOLOv8", "InsightFace", "DeepSORT", "OpenCV"],
+      "desc": "Architected a multi-model detection pipeline (InsightFace + OSNet Re-ID + DeepSORT + YOLOv8) achieving 90%+ accuracy with 512-dimensional face embeddings in pgvector for cross-location tracking — improving night-time detection from 55% to 78%+ and crowd detection from 65% to 85%+, with a React operator dashboard for real-time analytics."
+    }
+  ],
+  "publications": [
+    {
+      "id": 1,
+      "title": "2nd Prize — UI/UX Design",
+      "platform": "Sri Eshwar College of Engineering and Technology",
+      "year": "2025",
+      "link": "https://www.linkedin.com/in/kishan-s-g",
+      "desc": "Designed a data-driven ticket booking app that cut checkout time by 3 minutes and lifted user satisfaction by 60%; ran A/B tests with 50+ users in Figma to secure a Top 2 rank among 85+ entries."
+    },
+    {
+      "id": 2,
+      "title": "Hackathon Finalist",
+      "platform": "Sri Eshwar College of Engineering and Technology",
+      "year": "2026",
+      "link": "https://www.linkedin.com/in/kishan-s-g",
+      "desc": "Solved offline billing for low/unstable internet environments with an IndexedDB-based sync system ensuring uninterrupted transactions — shortlisted to the final round among all competing teams."
+    },
+    {
+      "id": 3,
+      "title": "Programming in Java",
+      "platform": "NPTEL Certification",
+      "year": "2024",
+      "link": "https://github.com/kishan02-sg",
+      "desc": "Completed NPTEL's certification program in Java programming, covering core language fundamentals and object-oriented design."
+    },
+    {
+      "id": 4,
+      "title": "Open Source & Side Projects",
+      "platform": "GitHub",
+      "year": "2026",
+      "link": "https://github.com/kishan02-sg",
+      "desc": "Building and shipping full-stack AI projects in the open — multi-agent systems, computer vision pipelines, and AI-assisted development workflows."
+    }
+  ],
+  "socials": [
+    { "label": "GitHub",    "href": "https://github.com/kishan02-sg" },
+    { "label": "LinkedIn",  "href": "https://www.linkedin.com/in/kishan-s-g" }
+  ]
+}

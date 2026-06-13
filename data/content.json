@@ -1,0 +1,22 @@
+{
+  "site": {
+    "tagline": "Portfolio 2026"
+  },
+  "hero": {
+    "taglineHighlight": "AI",
+    "freelanceNote": "Open to Full-Stack and AI internship opportunities.",
+    "availableLabel": "Available for opportunities",
+    "pills": ["Full-Stack Dev", "AI & Multi-Agent Systems", "Computer Vision", "Open to Internships"],
+    "specialistStat": { "value": "Full-Stack + AI", "label": "Specialist" }
+  },
+  "interstitial": {
+    "availabilityLabel": "Availability",
+    "basedInLabel": "Based in",
+    "statLabels": ["AI agents\narchitected", "Production\nprojects", "CV model\naccuracy"]
+  },
+  "footer": {
+    "eyebrow": "Open to Full-Stack & AI internship opportunities",
+    "ctaLines": ["Building intelligent", "products that"],
+    "ctaAccent": "ship."
+  }
+}
