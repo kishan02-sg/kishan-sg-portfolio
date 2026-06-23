@@ -9,7 +9,6 @@ import styles from '@/styles/sections/AboutSection.module.css'
 
 const BIO      = profile.bio
 const WHO_ITEMS = profile.skills
-const COURSES   = profile.courses ?? []
 
 const ICON_MAP = { GitHub: FaGithub, LinkedIn: FaLinkedinIn, Medium: FaMedium, Instagram: FaInstagram, YouTube: FaYoutube }
 
@@ -150,20 +149,6 @@ export default function AboutSection() {
           </p>
         </div>
 
-        {/* Continuous Learning */}
-        {COURSES.length > 0 && (
-          <div className={styles.learnWrap}>
-            <p className={styles.learnLabel}>Continuous Learning</p>
-            <ul className={styles.learnList}>
-              {COURSES.map((c, i) => (
-                <li key={i} className={styles.learnItem}>
-                  <span className={styles.learnTitle}>{c.title}</span>
-                  <span className={styles.learnPlatform}>{c.platform}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
 
       </div>
     </section>

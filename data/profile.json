@@ -95,6 +95,22 @@
       ],
       "desc": "B.Tech in Information Technology, with hands-on achievements in UI/UX design and hackathon finals alongside coursework in databases, data structures, and statistics.",
       "tech": ["Figma", "IndexedDB", "Database Management", "Data Structures", "Statistics"]
+    },
+    {
+      "id": 4,
+      "role": "Continuous Learning",
+      "company": "DeepLearning.AI",
+      "companyShort": "DLAI",
+      "type": "Online Courses",
+      "location": "Online",
+      "period": "2025",
+      "periodEnd": "2026",
+      "bullets": [
+        "LangChain for LLM Application Development — hands-on building of LLM-powered applications using chains, agents, and memory with the LangChain framework.",
+        "Building Systems with the ChatGPT API — multi-step workflows, chained prompts, and evaluation techniques for production LLM systems."
+      ],
+      "desc": "Self-directed AI/LLM coursework from DeepLearning.AI, covering LangChain application development and production-grade ChatGPT API systems.",
+      "tech": ["LangChain", "OpenAI API", "Python", "Prompt Engineering", "LLM Agents"]
     }
   ],
   "projects": [
