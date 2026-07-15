@@ -133,6 +133,27 @@
       "image": "/assets/project-smartdetect-v2.png",
       "tech": ["Python", "FastAPI", "React", "PostgreSQL", "pgvector", "Docker", "YOLOv8", "InsightFace", "DeepSORT", "OpenCV"],
       "desc": "Architected a multi-model detection pipeline (InsightFace + OSNet Re-ID + DeepSORT + YOLOv8) achieving 90%+ accuracy with 512-dimensional face embeddings in pgvector for cross-location tracking — improving night-time detection from 55% to 78%+ and crowd detection from 65% to 85%+, with a React operator dashboard for real-time analytics."
+    },
+    {
+      "id": 3,
+      "title": "AkkaKadai",
+      "subtitle": "Food Storefront Platform",
+      "type": "Client Project",
+      "status": "In Development",
+      "link": "https://akkakadai.vercel.app/",
+      "image": "/assets/project-akkakadai-v1.png",
+      "tech": ["Python", "FastAPI", "React", "UPI Payments", "AI Document Verification", "WhatsApp API"],
+      "desc": "A food storefront app built for a real client — customers browse the day's menu, order in minutes, and pay directly over UPI with no fees. Seller onboarding runs on AI-based document verification with automatic detail extraction, and WhatsApp ordering integration is next, pending phone number provisioning."
+    },
+    {
+      "id": 4,
+      "title": "Jarvis",
+      "subtitle": "Personal AI Automation Assistant",
+      "type": "AI Automation",
+      "badge": "Personal Tool",
+      "image": "/assets/project-jarvis-v1.png",
+      "tech": ["Python", "Telegram Bot API", "Browser Automation", "Voice Commands", "NLP"],
+      "desc": "A voice-command-driven personal assistant with remote device control through a Telegram bot — natural-language commands are parsed into tasks and executed via headless browser automation: form filling, data retrieval, download monitoring, and full system control of the PC from anywhere."
     }
   ],
   "publications": [

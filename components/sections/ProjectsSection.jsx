@@ -157,20 +157,27 @@ export default function ProjectsSection() {
                 <div className={styles.slideLeft}>
                   <div className={styles.meta}>
                     <span className={styles.typeTag}>{proj.type}</span>
+                    {proj.status && <span className={styles.statusTag}>{proj.status}</span>}
                   </div>
                   <h2 className={styles.title}>{proj.title}</h2>
                   <p  className={styles.subtitle}>{proj.subtitle}</p>
-                  <a
-                    href={proj.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.liveBtn}
-                  >
-                    <span>Live Demo</span>
-                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden>
-                      <path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </a>
+                  {proj.link ? (
+                    <a
+                      href={proj.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.liveBtn}
+                    >
+                      <span>Live Demo</span>
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden>
+                        <path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </a>
+                  ) : (
+                    <span className={styles.liveBtn} data-badge>
+                      <span>{proj.badge ?? 'Personal Tool'}</span>
+                    </span>
+                  )}
                 </div>
 
                 <div className={styles.slideRight}>
