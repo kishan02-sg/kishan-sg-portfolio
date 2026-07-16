@@ -788,6 +788,12 @@
   .itemRight { display: none; }
   .num       { font-size: 0.85rem; }
   .title     { font-size: 0.78rem; }
+  /* Long institution names must wrap inside the column, not clip off-screen */
+  .platform  {
+    white-space: normal;
+    max-width: 100%;
+    line-height: 1.35;
+  }
   .desc      {
     font-size: 0.72rem;
     -webkit-line-clamp: 1;
@@ -796,13 +802,39 @@
     -webkit-box-orient: vertical;
   }
 
-  /* Interstitial - show on mobile, scaled down */
-  .interstitialLeft  { display: flex; left: 1.5rem; }
-  .interstitialRight { display: flex; right: 1.5rem; gap: 0.9rem; }
+  /* Interstitial - stacked on mobile so location + stats never collide.
+     Location block sits in the upper third, stats become a horizontal row below it. */
+  .interstitialLeft {
+    display: flex;
+    top: 28%;
+    left: 1.5rem;
+    right: 1.5rem;
+    transform: none;
+    gap: 1.4rem;
+  }
+  .interstitialRight {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    top: 54%;
+    left: 1.5rem;
+    right: 1.5rem;
+    transform: none;
+    gap: 0.8rem;
+  }
+  .interDividerV { display: none; }          /* vertical dividers make no sense in a row */
+  .interNum {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+    min-width: 0;
+  }
+  .interNumLabel { text-align: left; }
   .interstitialBottom { display: flex; bottom: 2rem; }
   .interBig    { font-size: clamp(1.1rem, 5.5vw, 1.6rem); }
-  .interCount  { font-size: clamp(1.4rem, 7vw, 2.2rem); }
-  .interNumLabel { font-size: 0.52rem; }
+  .interCount  { font-size: clamp(1.5rem, 7vw, 2.1rem); }
+  .interNumLabel { font-size: 0.5rem; }
   .interLabel  { font-size: 0.55rem; }
 
   /* Footer */
