@@ -129,7 +129,7 @@
       "subtitle": "AI-Powered Retail Store Management System",
       "type": "Multi-Agent AI",
       "link": "https://kadaigpt-main.vercel.app",
-      "image": "/assets/project-kadaigpt-v2.png",
+      "image": "/assets/project-kadaigpt-v3.png",
       "tech": ["Python", "FastAPI", "React 19", "Supabase PostgreSQL", "Gemini 2.0 Vision", "Vercel Serverless", "PWA"],
       "desc": "Multi-tenant POS PWA for India's 15M+ kirana stores — real-time billing, inventory, a customer credit ledger with rule-based risk scoring, and GST tax reports from live per-store data. Adds a WhatsApp storefront bot answering stock/price queries from live inventory, Gemini Vision OCR bill digitization with confidence scoring, a 6-language UI, offline-first IndexedDB sync, and JWT auth with server-side RBAC — deployed on Vercel serverless."
     },
