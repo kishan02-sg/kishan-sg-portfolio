@@ -195,7 +195,7 @@
 
 .item:hover .title   { color: var(--accent); }
 .item:hover .num     { color: var(--accent); opacity: 1; }
-.item:hover .year    { opacity: 0.4; transform: translateY(-4px); }
+.item:hover .year    { opacity: 0.75; transform: translateY(-4px); }
 .item:hover .readBtn { opacity: 1; transform: translateY(0); }
 
 .num {
@@ -237,8 +237,8 @@
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--accent);
-  background: rgba(247, 147, 30, 0.08);
-  border: 1px solid rgba(247, 147, 30, 0.22);
+  background: rgba(232, 51, 74, 0.08);
+  border: 1px solid rgba(232, 51, 74, 0.22);
   padding: 0.13rem 0.42rem;
   border-radius: 3px;
   white-space: nowrap;
@@ -268,7 +268,7 @@
 .year {
   font-size: var(--text-small);
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.18);
+  color: rgba(255, 255, 255, 0.48);
   font-family: var(--font-geist-mono), monospace;
   letter-spacing: 0.04em;
   white-space: nowrap;
@@ -284,7 +284,7 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--accent);
-  border: 1px solid rgba(247, 147, 30, 0.38);
+  border: 1px solid rgba(232, 51, 74, 0.38);
   border-radius: 999px;
   padding: 0.22rem 0.6rem;
   white-space: nowrap;

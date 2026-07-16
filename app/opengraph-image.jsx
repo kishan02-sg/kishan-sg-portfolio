@@ -39,7 +39,7 @@ export default function Image() {
             width: 500,
             height: 500,
             borderRadius: 999,
-            background: 'rgba(247,147,30,0.15)',
+            background: 'rgba(232,51,74,0.15)',
           }}
         />
 

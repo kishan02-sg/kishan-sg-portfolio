@@ -6,20 +6,20 @@
   },
   "email": "kishansg02@gmail.com",
   "tagline": "Building full-stack AI products — multi-agent systems, computer vision, and products that ship.",
-  "description": "Final-year B.Tech IT student who designs and ships full-stack AI systems — multi-agent architectures, computer vision pipelines, and production-ready web platforms.",
+  "description": "Final-year B.Tech IT student who ships production AI systems — a multi-tenant POS platform, a real-time multi-model surveillance stack, and a client food storefront on UPI, deployed with FastAPI, React, and Supabase on serverless infra.",
   "roles": {
     "short": "Full-Stack & AI Engineer",
     "detailed": "AI Agents | Computer Vision | Full-Stack Development"
   },
   "location": {
     "based": "Coimbatore, India",
-    "availability": "India / Remote / Abroad"
+    "availability": "Full-Stack AI Roles / Remote"
   },
   "available": true,
-  "bio": "Final-year B.Tech IT student who ships production AI systems using modern LLM tooling — including a 7-agent retail platform designed for India's 15M+ kirana store market and a real-time multi-model surveillance system. Proficient in integrating and deploying full-stack AI products using Python, FastAPI, React, and the Gemini API, with hands-on experience in Docker, PostgreSQL, computer vision pipelines, and multi-agent architectures. Seeking Full-Stack + AI internship opportunities.",
+  "bio": "Final-year B.Tech IT student who ships production AI systems using modern LLM tooling — including a multi-tenant POS platform for India's 15M+ kirana stores and a real-time multi-model surveillance system. Proficient in integrating and deploying full-stack AI products using Python, FastAPI, React, and the Gemini API, with hands-on experience in Supabase PostgreSQL, serverless deployment, and offline-first architectures. Open to full-stack AI roles and remote opportunities.",
   "stats": [
-    { "value": "7", "label": "AI Agents Architected" },
-    { "value": "2", "label": "Production Projects" },
+    { "value": "4", "label": "Products Built" },
+    { "value": "2", "label": "Production Systems" },
     { "value": "90%+", "label": "CV Model Accuracy" }
   ],
   "skills": [
@@ -32,16 +32,25 @@
     "Prompt Engineering",
     "Gemini API",
     "Google Vision API",
+    "Web Speech API",
     "YOLOv8",
     "InsightFace",
     "DeepSORT",
+    "OSNet",
     "FastAPI",
     "React",
+    "Vite",
+    "PWA",
+    "OpenCV",
     "PostgreSQL",
     "pgvector",
     "Redis",
+    "IndexedDB",
     "Docker",
-    "Figma"
+    "Docker Compose",
+    "CI/CD",
+    "Git",
+    "Linux"
   ],
   "experience": [
     {
@@ -89,7 +98,7 @@
       "period": "2023",
       "periodEnd": "Present",
       "bullets": [
-        "Coursework: Database Management Systems, Data Structures, Statistics. Current CGPA: 7.3.",
+        "Coursework: Database Management Systems, Data Structures, Statistics. Current CGPA: 6.7.",
         "2nd Prize, UI/UX Design — designed a data-driven ticket booking app, conducted A/B testing with 50+ users in Figma, and secured a Top 2 rank among 85+ entries.",
         "Hackathon Finalist (2026) — solved offline billing for low/unstable internet using an IndexedDB-based sync system; shortlisted to the final round."
       ],

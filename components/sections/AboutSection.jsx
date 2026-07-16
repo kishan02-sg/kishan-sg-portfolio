@@ -9,6 +9,12 @@ import styles from '@/styles/sections/AboutSection.module.css'
 
 const BIO      = profile.bio
 const WHO_ITEMS = profile.skills
+// Split bio into a bold lead sentence + the rest at reading weight.
+// Editorial hierarchy: one focal sentence, then quieter body.
+const LEAD_END = (() => {
+  const idx = BIO.indexOf('. ')
+  return idx > 0 ? idx + 1 : Math.min(180, BIO.length)
+})()
 
 const ICON_MAP = { GitHub: FaGithub, LinkedIn: FaLinkedinIn, Medium: FaMedium, Instagram: FaInstagram, YouTube: FaYoutube }
 
@@ -131,22 +137,31 @@ export default function AboutSection() {
           </div>
         </div>
 
-        {/* Bio text - typewriter: all chars always in DOM, only color changes */}
+        {/* Bio text - typewriter with two-tier hierarchy: lead sentence, then quieter body */}
         <div className={styles.bioWrap}>
           <p className={styles.bio}>
-            {BIO.split('').map((char, i) => (
-              <span
-                key={i}
-                className={
-                  i < typed
-                    ? (i === typed - 1 && !done ? styles.lastTyped : styles.typed)
-                    : styles.untyped
-                }
-              >
-                {char}
-              </span>
-            ))}
+            {BIO.split('').map((char, i) => {
+              const isLead = i < LEAD_END
+              const typedState =
+                i < typed
+                  ? (i === typed - 1 && !done ? styles.lastTyped : styles.typed)
+                  : styles.untyped
+              return (
+                <span
+                  key={i}
+                  className={`${isLead ? styles.leadChar : styles.bodyChar} ${typedState}`}
+                >
+                  {char}
+                </span>
+              )
+            })}
           </p>
+          {done && (
+            <p className={styles.currentlyLine}>
+              <span className={styles.currentlyDot} />
+              Currently building <strong>AkkaKadai</strong> — a food storefront for a real client.
+            </p>
+          )}
         </div>
 
 

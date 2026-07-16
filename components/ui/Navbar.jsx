@@ -13,7 +13,8 @@ import styles from '@/styles/ui/Navbar.module.css'
 import { FaBars, FaTimes } from 'react-icons/fa'
 
 // idx matches snap position in page.js: 0=video, 1=hero, 2=about,
-// 3..(2+P)=project slides, then work-exp, publications, footer.
+// 3..(2+P)=project slides, 3+P=work-exp, then PublicationsFooter is 300vh
+// covering 3 steps: 4+P=pubs, 5+P=interstitial, 6+P=footer.
 // Derived from profile.projects.length so adding a project never breaks nav.
 const P = profile.projects.length
 const NAV_ITEMS = [
@@ -22,7 +23,7 @@ const NAV_ITEMS = [
   { label: 'Work',         idx: 3 },
   { label: 'Experience',   idx: 3 + P },
   { label: 'Impact',       idx: 4 + P },
-  { label: 'Contact',      idx: 5 + P },
+  { label: 'Contact',      idx: 6 + P },
 ]
 
 function getIST() {

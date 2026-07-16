@@ -154,16 +154,70 @@
 
 
 .bio {
-  font-size: clamp(1rem, 1.6vw, 1.6rem);
-  font-weight: 800;
-  line-height: 1.42;
+  font-size: clamp(0.95rem, 1.35vw, 1.35rem);
+  font-weight: 500;
+  line-height: 1.5;
   color: #111;
   margin: 0;
   width: 100%;
 }
 
-.typed    { color: #111; }
-.untyped  { color: #c8c8c8; }
+/* Two-tier hierarchy inside the same typewriter paragraph */
+.leadChar {
+  font-size: 1.22em;
+  font-weight: 800;
+  letter-spacing: -0.005em;
+}
+
+.bodyChar {
+  font-weight: 500;
+}
+
+.typed          { color: #111; }
+.bodyChar.typed { color: #333; }
+.untyped        { color: #d5d5d5; }
+
+/* Anchor line that appears once the typewriter completes */
+.currentlyLine {
+  margin: 1.6rem 0 0 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.42rem 0.95rem;
+  background: rgba(232, 51, 74, 0.06);
+  border: 1px solid rgba(232, 51, 74, 0.22);
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #4a1218;
+  line-height: 1.3;
+  animation: currentlyFadeIn 0.55s ease-out both;
+}
+
+.currentlyLine strong {
+  font-weight: 800;
+  color: #111;
+}
+
+.currentlyDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+  box-shadow: 0 0 0 3px rgba(232, 51, 74, 0.14);
+  animation: currentlyPulse 2s ease-in-out infinite;
+}
+
+@keyframes currentlyFadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0);   }
+}
+
+@keyframes currentlyPulse {
+  0%, 100% { box-shadow: 0 0 0 3px rgba(232, 51, 74, 0.14); }
+  50%      { box-shadow: 0 0 0 6px rgba(232, 51, 74, 0.06); }
+}
 
 /* Cursor lives as ::after on the last typed char - never a sibling node,
    so it cannot shift adjacent text or change line-wrap decisions. */
@@ -214,10 +268,17 @@
   .socials      { flex-direction: column; margin-top: 0; gap: 0.4rem; }
   .socialLink   { width: 2rem; height: 2rem; font-size: 1rem; }
   .content      { padding: 1rem 1.25rem 0.75rem; overflow-y: auto; -webkit-overflow-scrolling: touch; }
-  .bio          { font-size: clamp(0.72rem, 3vw, 0.95rem); }
-  .marqueeWrap  { margin-bottom: 0.6rem; }
-  .whoLabel     { font-size: 0.8rem; margin-bottom: 0.3rem; }
-  .signature    { font-size: 3rem; bottom: -1rem; right: -0.5rem; }
+  .bio            { font-size: clamp(0.72rem, 3vw, 0.95rem); }
+  .leadChar       { font-size: 1.14em; }
+  .marqueeWrap    { margin-bottom: 0.6rem; }
+  .whoLabel       { font-size: 0.8rem; margin-bottom: 0.3rem; }
+  .signature      { font-size: 3rem; bottom: -1rem; right: -0.5rem; }
+  .currentlyLine  {
+    margin-top: 0.9rem;
+    padding: 0.32rem 0.7rem;
+    font-size: 0.68rem;
+  }
+  .currentlyDot   { width: 6px; height: 6px; }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {

@@ -4,18 +4,18 @@
   },
   "hero": {
     "taglineHighlight": "AI",
-    "freelanceNote": "Open to Full-Stack and AI internship opportunities.",
-    "availableLabel": "Available for opportunities",
-    "pills": ["Full-Stack Dev", "AI & Multi-Agent Systems", "Computer Vision", "Open to Internships"],
+    "freelanceNote": "Open to full-stack AI roles and remote opportunities.",
+    "availableLabel": "Open to opportunities",
+    "pills": ["Full-Stack Dev", "AI & LLM Systems", "Computer Vision", "Open to Roles + Remote"],
     "specialistStat": { "value": "Full-Stack + AI", "label": "Specialist" }
   },
   "interstitial": {
-    "availabilityLabel": "Availability",
+    "availabilityLabel": "Open to",
     "basedInLabel": "Based in",
-    "statLabels": ["AI agents\narchitected", "Production\nprojects", "CV model\naccuracy"]
+    "statLabels": ["Products\nbuilt", "Production\nsystems", "CV model\naccuracy"]
   },
   "footer": {
-    "eyebrow": "Open to Full-Stack & AI internship opportunities",
+    "eyebrow": "Open to full-stack AI roles + remote opportunities",
     "ctaLines": ["Building intelligent", "products that"],
     "ctaAccent": "ship."
   }

@@ -13,6 +13,18 @@
   overflow: hidden;
 }
 
+/* Soft scrim under the navbar so nav links stay readable
+   over the photo's dark hair on the right */
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 5.5rem;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.28), rgba(0,0,0,0));
+  z-index: 5;
+  pointer-events: none;
+}
+
 /* ─── Photo ─────────────────────────────────────────────── */
 .photo {
   position: absolute;
@@ -121,9 +133,9 @@
 
 .roleText {
   font-family: var(--font-baloo), sans-serif;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--accent);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.78);
   line-height: 1.3;
   letter-spacing: 0.01em;
 }
