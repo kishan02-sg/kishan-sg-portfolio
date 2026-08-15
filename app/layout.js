@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono, Baloo_2, Dancing_Script } from "next/font/google";
 import "./globals.css";
 import Cursor from "@/components/ui/Cursor";
+import ChatWidget from "@/components/ui/ChatWidget";
 import { SITE_URL } from '@/lib/siteConfig';
 import { Analytics } from "@vercel/analytics/next";
 
@@ -131,6 +132,7 @@ export default function RootLayout({ children }) {
         />
         <Cursor />
         {children}
+        <ChatWidget />
         <Analytics />
       </body>
     </html>
