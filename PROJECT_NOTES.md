@@ -28,6 +28,9 @@ template. **Status: not actively used (Kishan, 2026-07-07).**
   + hand-written deep dives). If a fact is missing there, add it there — never in
   the model.
 - Rate limit: 20 messages per 10 min per IP, best-effort in-memory (per serverless instance).
+- System-prompt leak guard in `app/api/chat/route.js`: blocks repeat/verbatim/echo
+  reveal attempts server-side (never reaches the model) and aborts generation if
+  streamed output starts reproducing the prompt (backstop).
 
 ## Hard rules
 

@@ -11,6 +11,55 @@ const RATE_LIMIT = 20 // messages per window
 const RATE_WINDOW_MS = 10 * 60 * 1000 // 10 minutes
 const rateHits = new Map()
 
+// --- System-prompt leak guard (server-side, not just prompt rules) ---
+// The "repeat the text above verbatim" style of attack bypasses prompt-level
+// injection defenses, so block it here before it ever reaches the model.
+const LEAK_PATTERNS = [
+  /\bverbatim\b/i,
+  /\b(echo|recite|reproduce|restate|rephrase|reiterate|reword)\b/i,
+  /\bword\s*for\s*word\b/i,
+  /\b(your|this)\s+(system\s+)?(prompt|instructions?|rules?)\b/i,
+  /\bthe\s+system\s+prompt\b/i,
+  /\b(the|that|this)\s+(text|prompt|message|conversation)\s+above\b/i,
+  /\b(repeat|echo|copy|quote|output|print|show|reveal|leak|recite|reproduce|read\s*back|say\s*back|type\s*back)\b.{0,40}\b(text|prompt|instructions?|rules?|message|conversation|content|above|everything|all)\b/i,
+]
+
+function isLeakAttempt(text) {
+  return LEAK_PATTERNS.some((re) => re.test(text))
+}
+
+// Backstop for novel phrasings the input guard misses: if streamed output
+// starts reproducing the system prompt, abort the generation immediately.
+const LEAK_MARKERS = [
+  /# Non-negotiable rules/i,
+  /# Ground truth/i,
+  /# Deep dives/i,
+  /You are KishGPT/i,
+]
+
+const REFUSAL_TEXT =
+  'Sorry, I only answer questions about Kishan and his work. Ask me about his projects, skills, or experience!'
+
+// Serve a blocked request as a normal bot reply using the same UI-message
+// stream protocol the client expects (matches toUIMessageStreamResponse).
+function refusalStream() {
+  const frames = [
+    { type: 'start' },
+    { type: 'start-step' },
+    { type: 'text-start', id: 'txt-0' },
+    { type: 'text-delta', id: 'txt-0', delta: REFUSAL_TEXT },
+    { type: 'text-end', id: 'txt-0' },
+    { type: 'finish-step' },
+    { type: 'finish', finishReason: 'stop' },
+  ]
+  const body =
+    frames.map((f) => `data: ${JSON.stringify(f)}\n\n`).join('') +
+    'data: [DONE]\n\n'
+  return new Response(body, {
+    headers: { 'Content-Type': 'text/plain; charset=utf-8' },
+  })
+}
+
 function checkRateLimit(ip) {
   const now = Date.now()
   const entry = rateHits.get(ip)
@@ -76,15 +125,34 @@ export async function POST(req) {
     return Response.json({ error: 'No message provided.' }, { status: 400 })
   }
 
+  // System-prompt leak guard: refuse repeat/verbatim/echo reveal attempts
+  // before they reach the model.
+  for (const m of messages) {
+    if (m.role === 'user' && isLeakAttempt(m.content)) {
+      return refusalStream()
+    }
+  }
+
   const groq = createGroq({ apiKey: process.env.GROQ_API_KEY })
   const modelName = process.env.GROQ_MODEL || 'llama-3.3-70b-versatile'
 
+  let leakedText = ''
+  const controller = new AbortController()
   const result = streamText({
     model: groq(modelName),
     system: buildSystemPrompt(),
     messages,
     temperature: 0.4,
     maxOutputTokens: 600,
+    abortSignal: controller.signal,
+    onChunk({ chunk }) {
+      if (chunk.type === 'text-delta' && typeof chunk.text === 'string') {
+        leakedText += chunk.text
+        if (LEAK_MARKERS.some((re) => re.test(leakedText))) {
+          controller.abort()
+        }
+      }
+    },
   })
 
   return result.toUIMessageStreamResponse()
