@@ -8,7 +8,7 @@ import { gsap } from '@/lib/gsap'
 import {
   FaGithub, FaLinkedinIn, FaMedium, FaInstagram, FaYoutube, FaEnvelope,
 } from 'react-icons/fa'
-import { FiArrowUpRight, FiChevronDown } from 'react-icons/fi'
+import { FiArrowUpRight } from 'react-icons/fi'
 import profile from '@/data/profile.json'
 import content from '@/data/content.json'
 import styles from '@/styles/sections/PublicationsFooterSection.module.css'
@@ -445,18 +445,15 @@ export default function PublicationsFooterSection() {
         {/* ── Footer content ── */}
         <div ref={footerContentRef} className={styles.footerContent}>
 
-          {/* ── Mobile: hero-like layout ── */}
+          {/* ── Mobile: standard footer layout (CTA + email + socials) ── */}
           <div className={styles.mobileLayout}>
-            <div className={styles.mobileBrand}>
-              <span className={styles.mobileRoleDot} />
-              <span className={styles.mobileRoleText}>{profile.roles.short.toUpperCase()}</span>
-            </div>
-            <h2 className={styles.mobileName}>
-              {profile.name.first.toUpperCase()}
-              <br />
-              <span className={styles.mobileNameGhost}>{profile.name.last.toUpperCase()}</span>
+            <p className={styles.mobileEyebrow}>{content.footer.eyebrow}</p>
+            <h2 className={styles.mobileCtaHeading}>
+              {content.footer.ctaLines.map((line, i) => (
+                <span key={i}>{line}<br /></span>
+              ))}
+              <span className={styles.mobileCtaAccent}>{content.footer.ctaAccent}</span>
             </h2>
-            <p className={styles.mobileDesc}>{profile.description}</p>
             <div className={styles.mobileCtas}>
               <a href={`mailto:${profile.email}`} className={styles.mobileTalkBtn}>
                 Let&apos;s talk <FiArrowUpRight />
@@ -476,10 +473,6 @@ export default function PublicationsFooterSection() {
                   </Fragment>
                 )
               })}
-            </div>
-            <div className={styles.mobileScrollHint} aria-hidden>
-              <FiChevronDown size={18} />
-              <span className={styles.mobileScrollText}>Scroll to explore</span>
             </div>
           </div>
 

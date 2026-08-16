@@ -844,7 +844,7 @@
   .footerContent {
     display: flex;
     flex-direction: column;
-    padding: 4rem 0 0;
+    padding: 1.25rem 0 0;
     /* subtle extra darkening only at very bottom for footer text readability */
     background: linear-gradient(
       to bottom,
@@ -855,53 +855,39 @@
   .mainGrid    { display: none; }
   .signatureWrap { display: none; }
 
-  /* Mobile hero-like layout */
+  /* Mobile: standard footer layout - centered CTA + email + socials, no hero mirror */
   .mobileLayout {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    flex: 1;
-    gap: 1rem;
-    padding: 0 1.5rem 5.5rem;
-  }
-  .mobileBrand {
-    display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 0.6rem;
+    text-align: center;
+    flex: 1;
+    gap: 1.15rem;
+    padding: 3.5rem 1.5rem 3rem;
   }
-  .mobileRoleDot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--accent);
-    flex-shrink: 0;
-  }
-  .mobileRoleText {
-    font-size: 0.6rem;
+  .mobileEyebrow {
+    font-size: 0.56rem;
     font-weight: 700;
     letter-spacing: 0.22em;
     text-transform: uppercase;
     color: var(--accent);
+    margin: 0;
   }
-  .mobileName {
-    font-size: clamp(2rem, 8.5vw, 3rem);
+  .mobileCtaHeading {
+    font-size: clamp(1.5rem, 7.5vw, 2.2rem);
     font-weight: 900;
     text-transform: uppercase;
-    letter-spacing: -0.04em;
-    line-height: 0.88;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
     color: #fff;
     margin: 0;
   }
-  .mobileNameGhost { color: rgba(255, 255, 255, 0.25); }
-  .mobileDesc {
-    font-size: 0.76rem;
-    line-height: 1.7;
-    color: rgba(255, 255, 255, 0.6);
-    margin: 0;
-  }
+  .mobileCtaAccent { color: var(--accent); }
   .mobileCtas {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 0.75rem;
   }
   .mobileViewBtn {
@@ -926,22 +912,22 @@
   }
   .mobileViewBtn:hover { background: var(--accent-hover); }
   .mobileTalkBtn {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
-    width: 100%;
+    gap: 0.45rem;
+    width: auto;
     background: transparent;
     color: var(--accent);
-    font-size: 0.78rem;
+    font-size: 0.7rem;
     font-weight: 700;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
-    padding: 0.8rem 1.6rem;
+    padding: 0.55rem 1.5rem;
     border-radius: 9999px;
     border: 1.5px solid var(--accent);
     text-decoration: none;
-    min-height: 48px;
+    min-height: 38px;
     transition: background 0.2s, color 0.2s;
     box-sizing: border-box;
   }
@@ -979,21 +965,6 @@
     flex-shrink: 0;
     align-self: center;
   }
-  .mobileScrollHint {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.4rem;
-    color: rgba(255, 255, 255, 0.5);
-    padding-top: 0.2rem;
-  }
-  .mobileScrollText {
-    font-size: 0.48rem;
-    letter-spacing: 0.2em;
-    font-weight: 700;
-    text-transform: uppercase;
-  }
-
   /* Bottom bar */
   .bottomBar {
     position: absolute;
