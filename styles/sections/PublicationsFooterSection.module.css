@@ -761,7 +761,10 @@
 @media (max-width: 767px) {
   .glCanvas  { display: none; }
   .imageWrap { display: none; }
-  .sticky { height: 100svh; min-height: -webkit-fill-available; }
+  /* Height only: the old `min-height: -webkit-fill-available` resolved against
+     the 300vh wrapper (a definite height), stretched the sticky window to 300vh,
+     and broke the interstitial's percentage text positions on mobile. */
+  .sticky { height: 100svh; }
 
   /* pubContent has no background - mobileDarkOverlay provides uniform darkness beneath all sections */
 
