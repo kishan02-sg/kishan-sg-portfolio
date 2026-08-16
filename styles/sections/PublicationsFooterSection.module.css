@@ -770,8 +770,8 @@
 
   /* Publications */
   .pubHero { padding: 3.2rem 1.25rem 0; }
-  .label   { font-size: 0.58rem; }
-  .heading { font-size: clamp(1.6rem, 8vw, 2.2rem); }
+  .label   { font-size: 0.55rem; }
+  .heading { font-size: clamp(1.2rem, 6vw, 1.6rem); }
   .divider { margin: 0.5rem 1.25rem 0; }
 
   .list {
@@ -789,8 +789,8 @@
     padding-bottom: 0.2rem;
   }
   .itemRight { display: none; }
-  .num       { font-size: 0.85rem; }
-  .title     { font-size: 0.78rem; }
+  .num       { font-size: 0.8rem; }
+  .title     { font-size: 0.72rem; }
   /* Long institution names must wrap inside the column, not clip off-screen */
   .platform  {
     white-space: normal;
@@ -798,7 +798,7 @@
     line-height: 1.35;
   }
   .desc      {
-    font-size: 0.72rem;
+    font-size: 0.68rem;
     -webkit-line-clamp: 1;
     overflow: hidden;
     display: -webkit-box;
@@ -835,10 +835,10 @@
   }
   .interNumLabel { text-align: left; }
   .interstitialBottom { display: flex; bottom: 2rem; }
-  .interBig    { font-size: clamp(1.1rem, 5.5vw, 1.6rem); }
-  .interCount  { font-size: clamp(1.5rem, 7vw, 2.1rem); }
-  .interNumLabel { font-size: 0.5rem; }
-  .interLabel  { font-size: 0.55rem; }
+  .interBig    { font-size: clamp(0.95rem, 4.5vw, 1.3rem); }
+  .interCount  { font-size: clamp(1.2rem, 5.5vw, 1.7rem); }
+  .interNumLabel { font-size: 0.48rem; }
+  .interLabel  { font-size: 0.52rem; }
 
   /* Footer */
   .footerContent {
@@ -877,14 +877,14 @@
     flex-shrink: 0;
   }
   .mobileRoleText {
-    font-size: 0.65rem;
+    font-size: 0.6rem;
     font-weight: 700;
     letter-spacing: 0.22em;
     text-transform: uppercase;
     color: var(--accent);
   }
   .mobileName {
-    font-size: clamp(2.8rem, 11vw, 4rem);
+    font-size: clamp(2rem, 8.5vw, 3rem);
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: -0.04em;
@@ -894,7 +894,7 @@
   }
   .mobileNameGhost { color: rgba(255, 255, 255, 0.25); }
   .mobileDesc {
-    font-size: 0.82rem;
+    font-size: 0.76rem;
     line-height: 1.7;
     color: rgba(255, 255, 255, 0.6);
     margin: 0;
@@ -912,15 +912,15 @@
     width: 100%;
     background: var(--accent);
     color: #fff;
-    font-size: 0.875rem;
+    font-size: 0.78rem;
     font-weight: 700;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    padding: 0.9rem 1.6rem;
+    padding: 0.8rem 1.6rem;
     border-radius: 9999px;
     border: none;
     cursor: pointer;
-    min-height: 52px;
+    min-height: 48px;
     transition: background 0.2s;
     box-sizing: border-box;
   }
@@ -933,15 +933,15 @@
     width: 100%;
     background: transparent;
     color: var(--accent);
-    font-size: 0.875rem;
+    font-size: 0.78rem;
     font-weight: 700;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    padding: 0.9rem 1.6rem;
+    padding: 0.8rem 1.6rem;
     border-radius: 9999px;
     border: 1.5px solid var(--accent);
     text-decoration: none;
-    min-height: 52px;
+    min-height: 48px;
     transition: background 0.2s, color 0.2s;
     box-sizing: border-box;
   }

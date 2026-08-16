@@ -224,7 +224,9 @@
 
 @media (max-width: 767px) {
   .heroContent { padding: 0 1.5rem; }
-  .name        { font-size: clamp(2.8rem, 11vw, 5rem); }
+  .eyebrow     { font-size: 0.6rem; }
+  .name        { font-size: clamp(2.1rem, 9vw, 3.5rem); }
+  .role        { font-size: clamp(0.65rem, 0.9vw, 0.8rem); margin-top: 0.8rem; }
   .controls    { bottom: 1.5rem; right: 1rem; }
   .scrollCue   { bottom: 1.5rem; }
   .soundHint   { bottom: 4.5rem; right: 1rem; }

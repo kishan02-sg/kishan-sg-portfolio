@@ -310,9 +310,9 @@
 
   .card { padding-top: 0; }
 
-  .company  { font-size: 1.1rem; }
+  .company  { font-size: 1rem; }
   .bullets  { max-height: none; overflow: visible; }
-  .bullet   { font-size: 0.88rem; }
+  .bullet   { font-size: 0.82rem; }
   .stack    { display: none; }
 }
 

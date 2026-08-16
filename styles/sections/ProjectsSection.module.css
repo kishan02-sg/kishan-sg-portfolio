@@ -302,8 +302,8 @@
   }
 
   .slideRight { display: none; }
-  .title      { font-size: 1.8rem; }
-  .slideNum   { font-size: 5rem; bottom: 5rem; }
+  .title      { font-size: 1.4rem; }
+  .slideNum   { font-size: 4.5rem; bottom: 5rem; }
 }
 
 /* ── Mobile landscape / small tablet ────────── */
