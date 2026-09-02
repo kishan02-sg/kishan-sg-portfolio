@@ -133,27 +133,35 @@ export async function POST(req) {
     }
   }
 
-  const groq = createGroq({ apiKey: process.env.GROQ_API_KEY })
-  const modelName = process.env.GROQ_MODEL || 'llama-3.3-70b-versatile'
+  try {
+    const groq = createGroq({ apiKey: process.env.GROQ_API_KEY })
+    const modelName = process.env.GROQ_MODEL || 'qwen/qwen3.8-27b'
 
-  let leakedText = ''
-  const controller = new AbortController()
-  const result = streamText({
-    model: groq(modelName),
-    system: buildSystemPrompt(),
-    messages,
-    temperature: 0.4,
-    maxOutputTokens: 600,
-    abortSignal: controller.signal,
-    onChunk({ chunk }) {
-      if (chunk.type === 'text-delta' && typeof chunk.text === 'string') {
-        leakedText += chunk.text
-        if (LEAK_MARKERS.some((re) => re.test(leakedText))) {
-          controller.abort()
+    let leakedText = ''
+    const controller = new AbortController()
+    const result = streamText({
+      model: groq(modelName),
+      system: buildSystemPrompt(),
+      messages,
+      temperature: 0.4,
+      maxOutputTokens: 600,
+      abortSignal: controller.signal,
+      onChunk({ chunk }) {
+        if (chunk.type === 'text-delta' && typeof chunk.text === 'string') {
+          leakedText += chunk.text
+          if (LEAK_MARKERS.some((re) => re.test(leakedText))) {
+            controller.abort()
+          }
         }
-      }
-    },
-  })
+      },
+    })
 
-  return result.toUIMessageStreamResponse()
+    return result.toUIMessageStreamResponse()
+  } catch (err) {
+    console.error('Chat error:', err)
+    return Response.json(
+      { error: 'An error occurred while generating a response. Please try again.' },
+      { status: 500 }
+    )
+  }
 }

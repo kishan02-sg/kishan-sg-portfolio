@@ -43,7 +43,7 @@ A floating chat widget that answers visitor and recruiter questions about Kishan
 | Variable | Required | Default | Purpose |
 |---|---|---|---|
 | `GROQ_API_KEY` | yes | — | Groq API key for chat streaming |
-| `GROQ_MODEL` | no | `llama-3.3-70b-versatile` | Chat model override |
+| `GROQ_MODEL` | no | `qwen/qwen3.8-27b` | Chat model override |
 
 Put the key in `.env.local` for local development, and add it to the Vercel project env vars (Production) for the live site.
 

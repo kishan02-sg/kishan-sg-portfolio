@@ -22,7 +22,7 @@ template. **Status: not actively used (Kishan, 2026-07-07).**
   Groq. Files: `app/api/chat/route.js`, `components/ui/ChatWidget.jsx`,
   `styles/ui/ChatWidget.module.css`, `lib/chatKnowledge.js`.
 - **Env var: `GROQ_API_KEY`** (required) and optional `GROQ_MODEL` (default
-  `llama-3.3-70b-versatile`). Put the key in `.env.local` for local dev and in
+  `qwen/qwen3.8-27b`). Put the key in `.env.local` for local dev and in
   the Vercel project env vars for the live site (Settings → Environment Variables).
 - The bot answers ONLY from `lib/chatKnowledge.js` (built from `data/profile.json`
   + hand-written deep dives). If a fact is missing there, add it there — never in
