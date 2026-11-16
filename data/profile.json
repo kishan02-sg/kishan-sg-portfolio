@@ -20,7 +20,7 @@
   "stats": [
     { "value": "4", "label": "Products Built" },
     { "value": "2", "label": "Production Systems" },
-    { "value": "90%+", "label": "CV Model Accuracy" }
+    { "value": "99.7%", "label": "Identity Precision (ChokePoint)" }
   ],
   "skills": [
     "Python",
@@ -80,10 +80,9 @@
       "period": "2026",
       "periodEnd": "In Development",
       "bullets": [
-        "Architected a multi-model detection pipeline (InsightFace + OSNet Re-ID + DeepSORT + YOLOv8) achieving 90%+ accuracy.",
+        "Architected a multi-model detection pipeline (InsightFace + OSNet Re-ID + DeepSORT + YOLOv8); on ChokePoint (25 people, 3 cameras, 2,908 labelled frames), identity precision rose from 15.5% to 99.7% at 98.6% coverage, with 6.8 ms/frame overhead.",
         "Stored 512-dimensional face embeddings in PostgreSQL with pgvector for cross-location person tracking.",
-        "Improved night-time detection accuracy from 55% to 78%+ via CLAHE, gamma correction, and bilateral filtering.",
-        "Built a crowd-mode that boosts crowd-detection accuracy from 65% to 85%+ by splitting frames into quadrants, plus a React operator dashboard with real-time person trails and zone-based alerts."
+        "Built a React operator dashboard with real-time person trails and zone-based alerts."
       ],
       "desc": "A multi-model camera-based detection system with a real-time operator dashboard, multi-location analytics, and zone-based alerting.",
       "tech": ["Python", "FastAPI", "React", "PostgreSQL", "pgvector", "Docker", "YOLOv8", "InsightFace", "DeepSORT", "OpenCV"]
@@ -141,7 +140,7 @@
       "link": "https://dashboard-nine-weld-43.vercel.app/",
       "image": "/assets/project-smartdetect-v2.png",
       "tech": ["Python", "FastAPI", "React", "PostgreSQL", "pgvector", "Docker", "YOLOv8", "InsightFace", "DeepSORT", "OpenCV"],
-      "desc": "Architected a multi-model detection pipeline (InsightFace + OSNet Re-ID + DeepSORT + YOLOv8) achieving 90%+ accuracy with 512-dimensional face embeddings in pgvector for cross-location tracking — improving night-time detection from 55% to 78%+ and crowd detection from 65% to 85%+, with a React operator dashboard for real-time analytics."
+      "desc": "Architected a multi-model detection pipeline (InsightFace + OSNet Re-ID + DeepSORT + YOLOv8); on ChokePoint (25 people, 3 cameras, 2,908 labelled frames), identity precision rose from 15.5% to 99.7% at 98.6% coverage, with 6.8 ms/frame overhead."
     },
     {
       "id": 3,
