@@ -6,17 +6,32 @@
     "taglineHighlight": "AI",
     "freelanceNote": "Open to full-stack AI roles and remote opportunities.",
     "availableLabel": "Open to opportunities",
-    "pills": ["Full-Stack Dev", "AI & LLM Systems", "Computer Vision", "Open to Roles + Remote"],
-    "specialistStat": { "value": "Full-Stack + AI", "label": "Specialist" }
+    "pills": [
+      "Full-Stack Dev",
+      "AI & LLM Systems",
+      "Computer Vision",
+      "Open to Roles + Remote"
+    ],
+    "specialistStat": {
+      "value": "Full-Stack + AI",
+      "label": "Specialist"
+    }
   },
   "interstitial": {
     "availabilityLabel": "Open to",
     "basedInLabel": "Based in",
-    "statLabels": ["Products\nbuilt", "Production\nsystems", "CV model\naccuracy"]
+    "statLabels": [
+      "Products\nbuilt",
+      "Production\nsystems",
+      "Identity\nprecision"
+    ]
   },
   "footer": {
     "eyebrow": "Open to full-stack AI roles + remote opportunities",
-    "ctaLines": ["Building intelligent", "products that"],
+    "ctaLines": [
+      "Building intelligent",
+      "products that"
+    ],
     "ctaAccent": "ship."
   }
 }
